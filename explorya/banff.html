@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explorya | Banff National Park Accommodation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+<header class="details-header">
+  <a href="home.html" class="back-btn"><i class="ri-arrow-left-line"></i> Back</a>
+  <h1>Banff National Park</h1>
+  <p>Alberta, Canada · Nature & Mountain Stay</p>
+</header>
+
+<section class="details-container">
+  <div class="details-gallery">
+    <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80">
+    <img src="https://travelcrafters.com.au/wp-content/uploads/2025/01/banf-national-park.webp">
+  </div>
+
+  <div class="details-info">
+    <h2>About this accommodation</h2>
+    <p>Peaceful mountain lodges surrounded by lakes, forests, and breathtaking scenery.</p>
+    <ul class="details-features">
+      <li><i class="ri-check-line"></i> Free Wi-Fi</li>
+      <li><i class="ri-check-line"></i> Mountain view</li>
+      <li><i class="ri-check-line"></i> Nature trails nearby</li>
+      <li><i class="ri-check-line"></i> Fireplace lounge</li>
+      <li><i class="ri-check-line"></i> Airport shuttle</li>
+    </ul>
+  </div>
+
+  <aside class="details-book">
+    <h3>$2100</h3>
+    <p>3 Days / 4 Nights</p>
+    <label>Check-in</label><input type="date">
+    <label>Check-out</label><input type="date">
+    <label>Guests</label>
+    <select><option>1 Adult</option><option>2 Adults</option><option>Family</option></select>
+    <div id="reserve-msg" style="display:none;">Reserved successfully</div>
+    <button type="button" class="btn book-btn">Reserve Now</button>
+  </aside>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+document.querySelector('.book-btn').onclick=()=>{
+const m=document.getElementById('reserve-msg');
+m.style.display='block';
+setTimeout(()=>m.style.display='none',3000);
+}
+});
+</script>
+</body>
+</html>

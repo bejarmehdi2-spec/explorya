@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explorya | Nepal Accommodation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+<header class="details-header">
+  <a href="home.html" class="back-btn"><i class="ri-arrow-left-line"></i> Back</a>
+  <h1>Nepal</h1>
+  <p>Kathmandu, Nepal · Mountain View Accommodation</p>
+</header>
+
+<section class="details-container">
+  <div class="details-gallery">
+    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1200&q=80">
+    <img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=1200&q=80">
+  </div>
+
+  <div class="details-info">
+    <h2>About this accommodation</h2>
+    <p>Peaceful accommodation in Nepal offering mountain views, cozy rooms, and easy access to cultural landmarks.</p>
+    <ul class="details-features">
+      <li><i class="ri-check-line"></i> Free Wi-Fi</li>
+      <li><i class="ri-check-line"></i> Mountain view</li>
+      <li><i class="ri-check-line"></i> Breakfast included</li>
+      <li><i class="ri-check-line"></i> Airport transfer</li>
+    </ul>
+  </div>
+
+  <aside class="details-book">
+    <h3>$259</h3>
+    <p>3 Days / 4 Nights</p>
+    <label>Check-in</label><input type="date">
+    <label>Check-out</label><input type="date">
+    <label>Guests</label>
+    <select><option>1 Adult</option><option>2 Adults</option><option>Family</option></select>
+    <div id="reserve-msg" style="display:none;">Reserved successfully</div>
+    <button type="button" class="btn book-btn">Reserve Now</button>
+  </aside>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+document.querySelector('.book-btn').onclick=()=>{const m=document.getElementById('reserve-msg');m.style.display='block';setTimeout(()=>m.style.display='none',3000);}
+});
+</script>
+</body>
+</html>

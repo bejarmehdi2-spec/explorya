@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Modern Login Page</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+
+       
+        <div class="form-container sign-up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Example@gmail.com">
+                <input type="password" placeholder="Password">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+       
+        <div class="form-container sign-in">
+            <form onsubmit="return login()">
+                <h1>Sign In</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your email password</span>
+
+                <input id="email" type="email" placeholder="Example@gmail.com">
+                <input id="password" type="password" placeholder="Password">
+
+                <p id="error" style="color:red; font-size:14px; margin-top:5px;"></p>
+
+                <a href="#">Forget Your Password?</a>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        
+        <div class="toggle-container">
+            <div class="toggle">
+
+                <div class="toggle-panel toggle-left">
+                    <h1>Explorya</h1>
+                    <p>Enter your personal details to use all of site features</p>
+                    <button type="button" class="hidden" id="login">Sign In</button>
+                </div>
+
+                <div class="toggle-panel toggle-right">
+                    <h1>Explorya</h1>
+                    <p>Votre compagnon pour des voyages faciles, fluides et personnalisés.</p>
+                    <button type="button" class="hidden" id="register">Sign Up</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+   
+   <script>
+    function login() {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const error = document.getElementById("error");
+
+        error.textContent = "";
+
+       
+        if (email === "" || password === "") {
+            error.textContent = "Veuillez remplir votre email et votre mot de passe.";
+            return false;
+        }
+
+       
+        if (!email.includes("@")) {
+            error.textContent = "Votre email doit contenir '@' !";
+            return false;
+        }
+
+        
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regexEmail.test(email)) {
+            error.textContent = "Veuillez entrer un email valide.";
+            return false;
+        }
+
+       
+        window.location.href = "home.html";
+        return false;
+    }
+</script>
+
+
+</body>
+
+</html>

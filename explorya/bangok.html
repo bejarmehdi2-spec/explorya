@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explorya | Bangkok Accommodation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="details-header">
+  <a href="home.html" class="back-btn">
+    <i class="ri-arrow-left-line"></i> Back
+  </a>
+  <h1>Bangkok</h1>
+  <p>Bangkok, Thailand · City Center Accommodation</p>
+</header>
+
+<section class="details-container">
+
+ 
+  <div class="details-gallery">
+    <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=1200&q=80" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnUuCTlvrxpUE0_lG2E7Nkb4o9kkSoNDlkjA&s" />
+  </div>
+
+ 
+  <div class="details-info">
+    <h2>About this accommodation</h2>
+    <p>
+      Stay in the heart of Bangkok in a comfortable and modern accommodation.
+      Close to shopping malls, restaurants, cultural attractions, and public
+      transportation. Ideal for business travelers, couples, and families.
+    </p>
+
+    <ul class="details-features">
+      <li><i class="ri-check-line"></i> Free Wi-Fi</li>
+      <li><i class="ri-check-line"></i> Air-conditioned rooms</li>
+      <li><i class="ri-check-line"></i> Breakfast included</li>
+      <li><i class="ri-check-line"></i> 24/7 reception</li>
+      <li><i class="ri-check-line"></i> Airport shuttle</li>
+    </ul>
+  </div>
+
+ 
+  <aside class="details-book">
+    <h3>$2356</h3>
+    <p>3 Days / 4 Nights</p>
+
+    <label>Check-in</label>
+    <input type="date">
+
+    <label>Check-out</label>
+    <input type="date">
+
+    <label>Guests</label>
+    <select>
+      <option>1 Adult</option>
+      <option>2 Adults</option>
+      <option>Family</option>
+    </select>
+
+    <div id="reserve-msg" role="status" aria-live="polite"
+      style="display:none; background:#d4f5d4; color:#0f5132; padding:10px; border-radius:6px; margin-bottom:12px; border:1px solid #b6e4b6;">
+      Reserved successfully
+    </div>
+
+    <button type="button" class="btn book-btn">Reserve Now</button>
+  </aside>
+
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const btn = document.querySelector('.book-btn');
+  const msg = document.getElementById('reserve-msg');
+  if(btn && msg){
+    btn.addEventListener('click', function(){
+      msg.style.display = 'block';
+      setTimeout(function(){
+        msg.style.display = 'none';
+      }, 3000);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
